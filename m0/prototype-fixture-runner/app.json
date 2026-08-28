@@ -1,0 +1,72 @@
+{
+  "expo": {
+    "name": "oshiLog",
+    "slug": "oshilog",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "oshilog-m0",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F2F1F8",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.oshilog.app"
+    },
+    "android": {
+      "package": "com.oshilog.prototype.m0",
+      "softwareKeyboardLayoutMode": "pan",
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#F2F1F8",
+        "foregroundImage": "./assets/images/android-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-dev-client",
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow oshiLog to access your photos so you can attach cheki photos and idol media."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F2F1F8",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      "expo-video",
+      "expo-secure-store",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow oshiLog to access your photos so you can save album media.",
+          "savePhotosPermission": "Allow oshiLog to save album media to your gallery.",
+          "granularPermissions": [
+            "photo",
+            "video"
+          ]
+        }
+      ],
+      "expo-sharing",
+      "expo-background-task"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

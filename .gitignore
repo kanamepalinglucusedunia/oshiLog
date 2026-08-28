@@ -1,0 +1,12 @@
+.gradle/
+.kotlin/
+.idea/
+build/
+**/build/
+node_modules/
+.expo/
+local.properties
+*.iml
+*.apk
+captures/
+visual-baseline/prototype/m0-session/

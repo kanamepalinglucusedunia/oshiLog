@@ -1,0 +1,27 @@
+{
+  "device": "Pixel_8a Android Emulator",
+  "androidApi": 37,
+  "androidRelease": "17",
+  "orientation": "portrait",
+  "physicalPixels": "900x2000 override",
+  "densityDpi": 400,
+  "logicalViewportDp": "360x800",
+  "fontScale": 1.0,
+  "windowAnimationScale": 0,
+  "transitionAnimationScale": 0,
+  "animatorDurationScale": 0,
+  "locale": "en-US",
+  "timezone": "Asia/Jakarta",
+  "theme": "light",
+  "surfaceStyle": "outline",
+  "accent": "#7F6EB5",
+  "androidUser": {
+    "id": 10,
+    "name": "oshilog-golden-m0",
+    "syntheticOnly": true
+  },
+  "runnerPackage": "com.oshilog.prototype.m0",
+  "networkRequired": false,
+  "prototypeDataRequired": false,
+  "note": "Status-bar time is intentionally not a parity assertion. Compare app content below system bars."
+}

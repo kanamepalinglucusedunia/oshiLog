@@ -1,0 +1,31 @@
+{
+  "visualFixture": {
+    "owner": "C:\\Users\\chimuchimu\\App\\oshiLog V2\\src\\testing\\devSeed.ts",
+    "determinism": "fixed ids, names, dates, currencies, memberships, events, trip and expenses",
+    "clock": "2026-08 capture session",
+    "activeCountries": ["JP", "ID"],
+    "groups": ["Lumière", "Aster Blossom", "Mahkota Putri"],
+    "idolCount": 5,
+    "trip": "Tokyo Summer 2026",
+    "eventCount": 3,
+    "expectedHome": {
+      "activityIdr": "Rp 300,000",
+      "activityJpy": "¥113,200",
+      "cheki": 6,
+      "event": 3,
+      "trip": 1
+    },
+    "auditCorrections": [
+      "Hoshino Hinata's 2026 Lumière event entry is ungrouped because that membership ended in 2023; this aligns the fixture with intended membership-date semantics.",
+      "Yuki Mizuki receives an idol-owned JPY 1000 Normal cheki type; the original fallback used Hoshino Hinata's type and is rejected by validate_cheki_relation_insert."
+    ]
+  },
+  "performanceFixture": {
+    "owner": "C:\\Users\\chimuchimu\\App\\oshiLog V2\\src\\testing\\scaleFixtures.ts",
+    "eventAndEntrySeed": 12345,
+    "eventAndEntryTarget": 100000,
+    "albumSeed": 98765,
+    "albumTarget": 10000,
+    "nativeRequirement": "reproduce equivalent deterministic distributions in Kotlin tests; do not import prototype data"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "name": "oshilog",
+  "main": "expo-router/entry",
+  "version": "0.1.0",
+  "dependencies": {
+    "@expo-google-fonts/nunito": "^0.4.2",
+    "@expo/vector-icons": "^15.1.1",
+    "@hookform/resolvers": "^5.7.1",
+    "@noble/hashes": "^1.8.0",
+    "@shopify/react-native-skia": "2.6.2",
+    "expo": "~57.0.15",
+    "expo-background-task": "~57.0.12",
+    "expo-constants": "~57.0.11",
+    "expo-crypto": "~57.0.1",
+    "expo-dev-client": "~57.0.14",
+    "expo-document-picker": "~57.0.1",
+    "expo-file-system": "~57.0.4",
+    "expo-font": "~57.0.1",
+    "expo-image": "~57.0.3",
+    "expo-image-manipulator": "~57.0.12",
+    "expo-image-picker": "~57.0.12",
+    "expo-linking": "~57.0.7",
+    "expo-media-library": "~57.0.4",
+    "expo-network": "~57.0.1",
+    "expo-notifications": "~57.0.13",
+    "expo-router": "~57.0.15",
+    "expo-secure-store": "~57.0.1",
+    "expo-sharing": "~57.0.14",
+    "expo-splash-screen": "~57.0.7",
+    "expo-sqlite": "~57.0.1",
+    "expo-system-ui": "~57.0.2",
+    "expo-task-manager": "~57.0.12",
+    "expo-video": "~57.0.2",
+    "expo-web-browser": "~57.0.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.84.0",
+    "react-native": "0.86.2",
+    "react-native-gesture-handler": "~2.32.0",
+    "react-native-nitro-google-signin": "1.3.0",
+    "react-native-nitro-modules": "0.36.5",
+    "react-native-pager-view": "8.0.2",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "~0.21.0",
+    "react-native-worklets": "0.10.1",
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@testing-library/react-native": "^14.0.1",
+    "@types/jest": "29.5.14",
+    "@types/node": "^26.1.2",
+    "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~57.0.1",
+    "jest": "^29.7.0",
+    "jest-expo": "~57.0.4",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "lint": "expo lint",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:coverage": "jest --runInBand --coverage",
+    "deps:check": "expo install --check",
+    "doctor": "npx --yes expo-doctor",
+    "verify": "npm run deps:check && npm run doctor && npm run lint && npm run typecheck && npm run test:coverage"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/testing/jest.setup.ts"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "collectCoverageFrom": [
+      "src/utils/**/*.ts",
+      "src/services/**/*.ts",
+      "src/repositories/**/*.ts",
+      "src/drive/backupAllOrchestrator.ts",
+      "src/drive/client.ts",
+      "src/drive/cloudHistory.ts",
+      "src/drive/connectionLifecycle.ts",
+      "src/drive/dataBackupOrchestrator.ts",
+      "src/drive/driveBackupDomain.ts",
+      "src/drive/driveBackupTask.ts",
+      "src/drive/driveNotifications.ts",
+      "src/drive/driveRestore.ts",
+      "src/drive/installedDataStaging.ts",
+      "src/drive/installedMediaInventory.ts",
+      "src/drive/mediaBackupOrchestrator.ts",
+      "src/drive/mediaManifest.ts",
+      "src/drive/networkState.ts",
+      "src/drive/ownership.ts",
+      "src/drive/retention.ts",
+      "src/drive/scheduleEngine.ts",
+      "src/drive/secretStore.ts",
+      "src/drive/staging.ts",
+      "src/db/schema.ts",
+      "src/design-system/accentGenerator.ts",
+      "src/stores/**/*.ts",
+      "src/components/forms/IdolForm.tsx",
+      "src/components/forms/EventForm.tsx",
+      "src/components/forms/VenueSearchBottomSheet.tsx",
+      "src/components/ui/LocationDataAttribution.tsx",
+      "src/app/_layout.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 68,
+        "branches": 60,
+        "functions": 60,
+        "lines": 70
+      }
+    }
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "react-native-nitro-google-signin"
+        ]
+      }
+    }
+  },
+  "private": true
+}
